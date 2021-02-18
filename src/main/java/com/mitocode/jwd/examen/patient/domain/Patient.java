@@ -1,5 +1,6 @@
 package com.mitocode.jwd.examen.patient.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mitocode.jwd.examen.medicalconsultation.domain.MedicalConsultation;
@@ -12,6 +13,10 @@ public class Patient {
 	private String dni;
 	private String numberClinicalHistory;
 	private List<MedicalConsultation> medicalConsultations;
+
+	public Patient() {
+		medicalConsultations = new ArrayList<>();
+	}
 
 	public Integer getId() {
 		return id;

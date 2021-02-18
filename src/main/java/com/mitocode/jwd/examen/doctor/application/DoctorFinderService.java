@@ -18,6 +18,10 @@ public class DoctorFinderService {
 		this.doctorRepository = doctorRepository;
 	}
 
+	public Optional<Doctor> findById(Integer id) throws DoctorNotFoundException {
+		return Optional.ofNullable(doctorRepository.findById(id).orElseThrow(DoctorNotFoundException::new));
+	}
+
 	public Optional<Doctor> findByUsuario(Usuario usuario) throws DoctorNotFoundException {
 		return Optional.ofNullable(doctorRepository.findByUsuario(usuario).orElseThrow(DoctorNotFoundException::new));
 	}

@@ -17,6 +17,10 @@ public class PatientFinderService {
 		this.patientRepository = patientRepository;
 	}
 
+	public Optional<Patient> findById(Integer id) throws PatientNotFoundException {
+		return Optional.ofNullable(patientRepository.findById(id).orElseThrow(PatientNotFoundException::new));
+	}
+
 	public Optional<Patient> findByDni(String dni) throws PatientNotFoundException {
 		return Optional.ofNullable(patientRepository.findByDni(dni).orElseThrow(PatientNotFoundException::new));
 	}

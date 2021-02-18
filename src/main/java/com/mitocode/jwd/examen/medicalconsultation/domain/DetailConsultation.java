@@ -7,6 +7,16 @@ public class DetailConsultation {
 	private String treatment;
 	private MedicalConsultation medicalConsultation;
 
+	public DetailConsultation() {
+		medicalConsultation = new MedicalConsultation();
+	}
+
+	public DetailConsultation(String diagnostic, String treatment, MedicalConsultation medicalConsultation) {
+		this.diagnostic = diagnostic;
+		this.treatment = treatment;
+		this.medicalConsultation = medicalConsultation;
+	}
+
 	public Integer getId() {
 		return id;
 	}

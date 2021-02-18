@@ -14,12 +14,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import com.mitocode.jwd.examen.medicalconsultation.infrastructure.persistence.MedicalConsultationEntity;
 import com.mitocode.jwd.examen.specialty.infrastructure.persistence.SpecialtyEntity;
 import com.mitocode.jwd.examen.usuario.infrastructure.persistence.UsuarioEntity;
 
 @Entity
 @Table(name = "doctor")
+@DynamicUpdate
 public class DoctorEntity {
 
 	@Id
